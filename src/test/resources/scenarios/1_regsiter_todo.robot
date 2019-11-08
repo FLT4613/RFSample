@@ -4,6 +4,7 @@ Suite teardown    Close all browsers
 
 *** Variables ***
 ${BROWSER}        chrome
+${HOST}        localhost:8080
 
 *** Test Cases ***
 Register Operation Works Well
@@ -22,7 +23,7 @@ Register Operation Workflow
     Close Application Page
 
 Open Application Page
-    Open Browser    http://localhost:8080/index.jsp    ${BROWSER}
+    Open Browser    http://${HOST}/index.jsp    ${BROWSER}
 
 Register Todo
     [Arguments]    ${arg}
